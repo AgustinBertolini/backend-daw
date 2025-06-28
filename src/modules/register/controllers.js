@@ -3,8 +3,8 @@ const connectDB = require("../../config/db");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "*",
-  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+  "Access-Control-Allow-Credentials": true,
+  "Content-Type": "application/json",
 };
 
 exports.register = async (event, context) => {

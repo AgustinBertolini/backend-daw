@@ -4,8 +4,8 @@ const verifyToken = require("../../config/auth");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "*",
-  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+  "Access-Control-Allow-Credentials": true,
+  "Content-Type": "application/json",
 };
 
 // Para Serverless, el handler debe ser una función exportada como 'handler' o 'main'.
