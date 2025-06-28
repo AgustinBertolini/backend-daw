@@ -1,13 +1,20 @@
 const loginService = require("./services");
 const connectDB = require("../../config/db");
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "*",
+  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+};
+
 exports.login = async (event, context) => {
   await connectDB();
   try {
     const { email, password } = JSON.parse(event.body);
-    return await loginService.login(email, password);
+    const result = await loginService.login(email, password);
+    return { ...result, headers: corsHeaders };
   } catch (err) {
-    return { statusCode: 500, body: err.message };
+    return { statusCode: 500, body: err.message, headers: corsHeaders };
   }
 };
 
@@ -18,11 +25,12 @@ exports.refreshToken = async (event, context) => {
     const authHeader =
       headers && (headers.Authorization || headers.authorization);
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return { statusCode: 401, body: "Token requerido" };
+      return { statusCode: 401, body: "Token requerido", headers: corsHeaders };
     }
     const token = authHeader.split(" ")[1];
-    return await loginService.refreshToken(token);
+    const result = await loginService.refreshToken(token);
+    return { ...result, headers: corsHeaders };
   } catch (err) {
-    return { statusCode: 500, body: err.message };
+    return { statusCode: 500, body: err.message, headers: corsHeaders };
   }
 };
