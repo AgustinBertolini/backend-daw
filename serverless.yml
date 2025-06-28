@@ -7,19 +7,6 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: us-east-1
-  httpApi:
-    cors:
-      allowedOrigins:
-        - "*"
-      allowedHeaders:
-        - "*"
-      allowedMethods:
-        - GET
-        - POST
-        - PUT
-        - DELETE
-        - OPTIONS
-      allowCredentials: false
 
 functions:
   hello:
@@ -28,6 +15,7 @@ functions:
       - http:
           path: api/hola
           method: get
+          cors: true
   categorias:
     handler: src/modules/categorias/controllers.main
     timeout: 30
@@ -35,18 +23,23 @@ functions:
       - http:
           path: api/categorias
           method: get
+          cors: true
       - http:
           path: api/categorias
           method: post
+          cors: true
       - http:
           path: api/categorias/{id}
           method: get
+          cors: true
       - http:
           path: api/categorias/{id}
           method: put
+          cors: true
       - http:
           path: api/categorias/{id}
           method: delete
+          cors: true
   compras:
     handler: src/modules/compras/controllers.main
     timeout: 30
@@ -54,18 +47,23 @@ functions:
       - http:
           path: api/compras
           method: get
+          cors: true
       - http:
           path: api/compras
           method: post
+          cors: true
       - http:
           path: api/compras/{id}
           method: get
+          cors: true
       - http:
           path: api/compras/{id}
           method: put
+          cors: true
       - http:
           path: api/compras/{id}
           method: delete
+          cors: true
   favoritos:
     handler: src/modules/favoritos/controllers.main
     timeout: 30
@@ -73,18 +71,23 @@ functions:
       - http:
           path: api/favoritos
           method: get
+          cors: true
       - http:
           path: api/favoritos
           method: post
+          cors: true
       - http:
           path: api/favoritos/{id}
           method: get
+          cors: true
       - http:
           path: api/favoritos/{id}
           method: put
+          cors: true
       - http:
           path: api/favoritos/{id}
           method: delete
+          cors: true
   generos:
     handler: src/modules/generos/controllers.main
     timeout: 30
@@ -92,18 +95,23 @@ functions:
       - http:
           path: api/generos
           method: get
+          cors: true
       - http:
           path: api/generos
           method: post
+          cors: true
       - http:
           path: api/generos/{id}
           method: get
+          cors: true
       - http:
           path: api/generos/{id}
           method: put
+          cors: true
       - http:
           path: api/generos/{id}
           method: delete
+          cors: true
   productos:
     handler: src/modules/productos/controllers.main
     timeout: 30
@@ -111,18 +119,23 @@ functions:
       - http:
           path: api/productos
           method: get
+          cors: true
       - http:
           path: api/productos
           method: post
+          cors: true
       - http:
           path: api/productos/{id}
           method: get
+          cors: true
       - http:
           path: api/productos/{id}
           method: put
+          cors: true
       - http:
           path: api/productos/{id}
           method: delete
+          cors: true
   usuarios:
     handler: src/modules/usuarios/controllers.main
     timeout: 30
@@ -130,18 +143,23 @@ functions:
       - http:
           path: api/usuarios
           method: get
+          cors: true
       - http:
           path: api/usuarios
           method: post
+          cors: true
       - http:
           path: api/usuarios/{id}
           method: get
+          cors: true
       - http:
           path: api/usuarios/{id}
           method: put
+          cors: true
       - http:
           path: api/usuarios/{id}
           method: delete
+          cors: true
   chatbot:
     handler: src/services/chatbot/chatbot.main
     timeout: 30
@@ -149,6 +167,7 @@ functions:
       - http:
           path: api/chatbot
           method: post
+          cors: true
   ayudaProducto:
     handler: src/services/chatbot/ayudaProductoController.main
     timeout: 30
@@ -156,6 +175,7 @@ functions:
       - http:
           path: api/chatbot/ayuda-producto
           method: post
+          cors: true
   login:
     handler: src/modules/login/controllers.login
     timeout: 30
@@ -163,6 +183,7 @@ functions:
       - http:
           path: api/login
           method: post
+          cors: true
   refreshToken:
     handler: src/modules/login/controllers.refreshToken
     timeout: 30
@@ -170,6 +191,7 @@ functions:
       - http:
           path: api/refresh-token
           method: post
+          cors: true
   register:
     handler: src/modules/register/controllers.register
     timeout: 30
@@ -177,3 +199,4 @@ functions:
       - http:
           path: api/register
           method: post
+          cors: true
