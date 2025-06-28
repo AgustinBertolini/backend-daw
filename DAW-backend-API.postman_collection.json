@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "daw-backend-api-collection",
+    "name": "DAW Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Hello",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/hola",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "hola"]
+        }
+      }
+    },
+    {
+      "name": "Categorias",
+      "item": [
+        {
+          "name": "Listar categorias",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/categorias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "categorias"]
+            }
+          }
+        },
+        {
+          "name": "Crear categoria",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/categorias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "categorias"]
+            },
+            "body": { "mode": "raw", "raw": "{\n  \"nombre\": \"Ejemplo\"\n}" }
+          }
+        },
+        {
+          "name": "Obtener categoria por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/categorias/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "categorias", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar categoria",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/categorias/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "categorias", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo nombre\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar categoria",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/categorias/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "categorias", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Compras",
+      "item": [
+        {
+          "name": "Listar compras",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/compras",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "compras"]
+            }
+          }
+        },
+        {
+          "name": "Crear compra",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/compras",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "compras"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": \"\",\n  \"total\": 0,\n  \"envio\": 0\n}"
+            }
+          }
+        },
+        {
+          "name": "Obtener compra por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/compras/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "compras", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar compra",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/compras/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "compras", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"total\": 0,\n  \"envio\": 0\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar compra",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/compras/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "compras", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Favoritos",
+      "item": [
+        {
+          "name": "Listar favoritos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/favoritos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "favoritos"]
+            }
+          }
+        },
+        {
+          "name": "Crear favorito",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/favoritos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "favoritos"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": \"\",\n  \"productoId\": \"\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Obtener favorito por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/favoritos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "favoritos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar favorito",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/favoritos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "favoritos", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"usuarioId\": \"\",\n  \"productoId\": \"\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar favorito",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/favoritos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "favoritos", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Generos",
+      "item": [
+        {
+          "name": "Listar generos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/generos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "generos"]
+            }
+          }
+        },
+        {
+          "name": "Crear genero",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/generos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "generos"]
+            },
+            "body": { "mode": "raw", "raw": "{\n  \"nombre\": \"Ejemplo\"\n}" }
+          }
+        },
+        {
+          "name": "Obtener genero por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/generos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "generos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar genero",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/generos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "generos", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo nombre\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar genero",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/generos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "generos", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "Listar productos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/productos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos"]
+            }
+          }
+        },
+        {
+          "name": "Listar mis productos",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/productos?mine=true",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos"],
+              "query": [{ "key": "mine", "value": "true" }]
+            },
+            "header": [{ "key": "Authorization", "value": "Bearer <token>" }]
+          }
+        },
+        {
+          "name": "Crear producto",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/productos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Ejemplo\",\n  \"precio\": 0\n}"
+            }
+          }
+        },
+        {
+          "name": "Obtener producto por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/productos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar producto",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/productos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo nombre\",\n  \"precio\": 0\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar producto",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/productos/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "productos", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Listar usuarios",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/usuarios",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "usuarios"]
+            }
+          }
+        },
+        {
+          "name": "Crear usuario",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/usuarios",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "usuarios"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Ejemplo\",\n  \"email\": \"ejemplo@mail.com\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Obtener usuario por ID",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/api/usuarios/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "usuarios", ":id"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar usuario",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "http://localhost:3000/api/usuarios/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "usuarios", ":id"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nuevo nombre\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Eliminar usuario",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/api/usuarios/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "usuarios", ":id"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Chatbot",
+      "item": [
+        {
+          "name": "Consulta general",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/chatbot",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "chatbot"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": \"¿Dónde encuentro zapatillas?\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Ayuda producto",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "http://localhost:3000/api/chatbot/ayuda-producto",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "chatbot", "ayuda-producto"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"tipo\": \"descripcion\",\n  \"nombre\": \"Zapatillas\",\n  \"categoriaId\": \"<id_categoria>\"\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

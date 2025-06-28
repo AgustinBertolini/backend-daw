@@ -1,0 +1,67 @@
+const connectDB = require("../../config/db");
+const productoService = require("./services");
+const verifyToken = require("../../config/auth");
+
+// Para Serverless, el handler debe ser una función exportada como 'handler' o 'main'.
+exports.main = async (event, context) => {
+  await connectDB();
+  // Verificar autenticación antes de cualquier acción
+  const authResult = await verifyToken(event);
+  if (authResult && authResult.statusCode) return authResult;
+
+  console.log("Conectando a la base de datos y verificando token...");
+
+  const { httpMethod, pathParameters, body } = event;
+  try {
+    switch (httpMethod) {
+      case "GET":
+        if (pathParameters && pathParameters.id) {
+          const producto = await productoService.getProductoById(
+            pathParameters.id
+          );
+          if (!producto) return { statusCode: 404, body: "No encontrado" };
+          return { statusCode: 200, body: JSON.stringify(producto) };
+        } else if (
+          event.queryStringParameters &&
+          event.queryStringParameters.mine === "true"
+        ) {
+          // Endpoint para ver solo los productos del usuario logeado
+          const productos = await productoService.getProductosByUser(
+            authResult.userId
+          );
+          return { statusCode: 200, body: JSON.stringify(productos) };
+        } else {
+          console.log("Obteniendo todos los productos");
+          const productos = await productoService.getAllProductos();
+          return { statusCode: 200, body: JSON.stringify(productos) };
+        }
+      case "POST":
+        const nuevo = await productoService.createProducto(
+          JSON.parse(body),
+          authResult.userId
+        );
+        return { statusCode: 201, body: JSON.stringify(nuevo) };
+      case "PUT":
+        if (!pathParameters || !pathParameters.id)
+          return { statusCode: 400, body: "ID requerido" };
+        const actualizado = await productoService.updateProducto(
+          pathParameters.id,
+          JSON.parse(body)
+        );
+        if (!actualizado) return { statusCode: 404, body: "No encontrado" };
+        return { statusCode: 200, body: JSON.stringify(actualizado) };
+      case "DELETE":
+        if (!pathParameters || !pathParameters.id)
+          return { statusCode: 400, body: "ID requerido" };
+        const eliminado = await productoService.deleteProducto(
+          pathParameters.id
+        );
+        if (!eliminado) return { statusCode: 404, body: "No encontrado" };
+        return { statusCode: 204 };
+      default:
+        return { statusCode: 405, body: "Método no permitido" };
+    }
+  } catch (err) {
+    return { statusCode: 500, body: err.message };
+  }
+};

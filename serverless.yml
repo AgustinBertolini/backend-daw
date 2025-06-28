@@ -1,0 +1,166 @@
+service: daw-backend
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: api/hola
+          method: get
+  categorias:
+    handler: src/modules/categorias/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/categorias
+          method: get
+      - http:
+          path: api/categorias
+          method: post
+      - http:
+          path: api/categorias/{id}
+          method: get
+      - http:
+          path: api/categorias/{id}
+          method: put
+      - http:
+          path: api/categorias/{id}
+          method: delete
+  compras:
+    handler: src/modules/compras/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/compras
+          method: get
+      - http:
+          path: api/compras
+          method: post
+      - http:
+          path: api/compras/{id}
+          method: get
+      - http:
+          path: api/compras/{id}
+          method: put
+      - http:
+          path: api/compras/{id}
+          method: delete
+  favoritos:
+    handler: src/modules/favoritos/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/favoritos
+          method: get
+      - http:
+          path: api/favoritos
+          method: post
+      - http:
+          path: api/favoritos/{id}
+          method: get
+      - http:
+          path: api/favoritos/{id}
+          method: put
+      - http:
+          path: api/favoritos/{id}
+          method: delete
+  generos:
+    handler: src/modules/generos/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/generos
+          method: get
+      - http:
+          path: api/generos
+          method: post
+      - http:
+          path: api/generos/{id}
+          method: get
+      - http:
+          path: api/generos/{id}
+          method: put
+      - http:
+          path: api/generos/{id}
+          method: delete
+  productos:
+    handler: src/modules/productos/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/productos
+          method: get
+      - http:
+          path: api/productos
+          method: post
+      - http:
+          path: api/productos/{id}
+          method: get
+      - http:
+          path: api/productos/{id}
+          method: put
+      - http:
+          path: api/productos/{id}
+          method: delete
+  usuarios:
+    handler: src/modules/usuarios/controllers.main
+    timeout: 30
+    events:
+      - http:
+          path: api/usuarios
+          method: get
+      - http:
+          path: api/usuarios
+          method: post
+      - http:
+          path: api/usuarios/{id}
+          method: get
+      - http:
+          path: api/usuarios/{id}
+          method: put
+      - http:
+          path: api/usuarios/{id}
+          method: delete
+  chatbot:
+    handler: src/services/chatbot/chatbot.main
+    timeout: 30
+    events:
+      - http:
+          path: api/chatbot
+          method: post
+  ayudaProducto:
+    handler: src/services/chatbot/ayudaProductoController.main
+    timeout: 30
+    events:
+      - http:
+          path: api/chatbot/ayuda-producto
+          method: post
+  login:
+    handler: src/modules/login/controllers.login
+    timeout: 30
+    events:
+      - http:
+          path: api/login
+          method: post
+  refreshToken:
+    handler: src/modules/login/controllers.refreshToken
+    timeout: 30
+    events:
+      - http:
+          path: api/refresh-token
+          method: post
+  register:
+    handler: src/modules/register/controllers.register
+    timeout: 30
+    events:
+      - http:
+          path: api/register
+          method: post
