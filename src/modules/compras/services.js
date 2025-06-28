@@ -35,7 +35,10 @@ async function createCompra(data) {
       { new: true }
     );
   }
-  return await Compra.create({ ...data, estado: "" });
+  // Si no viene estado, usar el default del schema
+  const compraData = { ...data };
+  if (!compraData.estado) delete compraData.estado;
+  return await Compra.create(compraData);
 }
 
 async function updateCompra(id, data) {
