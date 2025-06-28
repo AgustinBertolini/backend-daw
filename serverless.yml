@@ -16,14 +16,13 @@ functions:
           path: api/hola
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   categorias:
     handler: src/modules/categorias/controllers.main
@@ -33,66 +32,61 @@ functions:
           path: api/categorias
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/categorias
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/categorias/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/categorias/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/categorias/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   compras:
     handler: src/modules/compras/controllers.main
@@ -102,66 +96,61 @@ functions:
           path: api/compras
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/compras
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/compras/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/compras/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/compras/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   favoritos:
     handler: src/modules/favoritos/controllers.main
@@ -171,66 +160,61 @@ functions:
           path: api/favoritos
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/favoritos
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/favoritos/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/favoritos/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/favoritos/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   generos:
     handler: src/modules/generos/controllers.main
@@ -240,66 +224,61 @@ functions:
           path: api/generos
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/generos
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/generos/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/generos/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/generos/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   productos:
     handler: src/modules/productos/controllers.main
@@ -309,66 +288,61 @@ functions:
           path: api/productos
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/productos
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/productos/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/productos/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/productos/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   usuarios:
     handler: src/modules/usuarios/controllers.main
@@ -378,66 +352,61 @@ functions:
           path: api/usuarios
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/usuarios
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/usuarios/{id}
           method: get
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/usuarios/{id}
           method: put
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
       - http:
           path: api/usuarios/{id}
           method: delete
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   chatbot:
     handler: src/services/chatbot/chatbot.main
@@ -447,14 +416,13 @@ functions:
           path: api/chatbot
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   ayudaProducto:
     handler: src/services/chatbot/ayudaProductoController.main
@@ -464,14 +432,13 @@ functions:
           path: api/chatbot/ayuda-producto
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   login:
     handler: src/modules/login/controllers.login
@@ -481,14 +448,13 @@ functions:
           path: api/login
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   refreshToken:
     handler: src/modules/login/controllers.refreshToken
@@ -498,14 +464,13 @@ functions:
           path: api/refresh-token
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true
   register:
     handler: src/modules/register/controllers.register
@@ -515,12 +480,11 @@ functions:
           path: api/register
           method: post
           cors:
-            origin: "*"
+            origin: "https://main.d25qt8tyxax8iu.amplifyapp.com"
             headers:
               - Content-Type
               - X-Amz-Date
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-              - Access-Control-Allow-Origin
             allowCredentials: true

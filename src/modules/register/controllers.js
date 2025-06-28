@@ -2,7 +2,7 @@ const registerService = require("./services");
 const connectDB = require("../../config/db");
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": "https://main.d25qt8tyxax8iu.amplifyapp.com",
   "Access-Control-Allow-Credentials": true,
   "Content-Type": "application/json",
 };
