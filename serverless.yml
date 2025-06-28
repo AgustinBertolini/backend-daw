@@ -7,6 +7,19 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: us-east-1
+  httpApi:
+    cors:
+      allowedOrigins:
+        - "*"
+      allowedHeaders:
+        - "*"
+      allowedMethods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - OPTIONS
+      allowCredentials: false
 
 functions:
   hello:
