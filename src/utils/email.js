@@ -5,7 +5,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "soporte.mercado.clone@gmail.com",
-    pass: "soportemercadoclone",
+    pass: "xhtd uoba itch hwwv",
   },
 });
 
@@ -25,7 +25,6 @@ async function sendCompraConfirmation(to, compra) {
       <div style="font-family: 'Segoe UI', Arial, sans-serif; background: #f5f6fa; padding: 32px;">
         <div style="max-width: 480px; margin: 0 auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); overflow: hidden;">
           <div style="background: #ffe600; padding: 24px 0; text-align: center;">
-            <img src='https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.5.1/mercadolibre/logo__large_plus.png' alt='Logo' style='height: 40px;'/>
           </div>
           <div style="padding: 32px 24px;">
             <h2 style="color: #333; margin-bottom: 12px;">¡Gracias por tu compra!</h2>
